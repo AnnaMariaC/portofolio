@@ -1,0 +1,342 @@
+body {
+  padding-top: 50px;
+}
+/*Navbar*/
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.main-menu {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  font-size: 1rem;
+  background-color: var(--dark-color);
+  margin: 0;
+  padding: 0;
+}
+.logoButton img {
+  border-radius: 10px;
+  width: 50px;
+  margin: 0.2rem 1rem;
+}
+.logoButton img:hover {
+  transform: translate(2px);
+}
+
+@media only screen and (max-width: 730px) {
+  .main-menu {
+    font-size: 0.7rem;
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .main-menu {
+    font-size: 0.5rem;
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 530px) {
+  .main-menu li a {
+    padding: 0;
+  }
+}
+li {
+  padding: 1rem;
+}
+menu li a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 0.5rem 0.7rem;
+}
+menu li a:hover {
+  border-radius: 20px;
+  box-shadow: var(--text-color) 1px 3px 5px,
+    inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+}
+.push {
+  margin-left: auto;
+}
+/* Container about me  */
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 1rem 1rem;
+  padding: 1rem 1rem;
+  height: 77vh;
+}
+.div-image {
+  padding: 0.4rem 1rem;
+  justify-self: center;
+}
+.imageAboutMe {
+  margin-top: 6rem;
+  height: 50vh;
+}
+.content {
+  width: 100%;
+  height: 77vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.sliderWrapper {
+  font-size: 40px;
+  color: #aaa;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sliderWrapper h4 {
+  margin: 1.5rem;
+}
+.sliderWrapper > p {
+  text-align: justify;
+  font-size: 1.2rem;
+  margin: 2rem 1rem;
+  padding: 1rem 1.1rem;
+  word-spacing: 0.3rem;
+}
+.slider {
+  height: 50px;
+  padding-left: 15px;
+  overflow: hidden;
+}
+.slider div {
+  color: white;
+  margin-bottom: 50px;
+  padding: 1px 15px;
+  text-align: center;
+}
+.sliderTitle {
+  background-color: var(--success-color);
+  animation: slide 8s linear infinite;
+}
+.sliderName {
+  background-color: var(--primary-color-dark);
+}
+
+@keyframes slide {
+  0% {
+    margin-top: -200px;
+  }
+  30% {
+    margin-top: -100px;
+  }
+  50% {
+    margin-top: -100px;
+  }
+  75% {
+    margin-top: -0px;
+  }
+  80% {
+    margin-top: -0px;
+  }
+  100% {
+    margin-top: 50px;
+  }
+}
+/* contact me page */
+/* big container for form section with all title picture form */
+.contactWraper {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  justify-content: space-evenly;
+  border: 2px outset var(--text-color);
+  height: 75vh;
+  width: 50%;
+  margin: 2rem auto;
+  padding: 1rem 1rem;
+  border-radius: 20px;
+  background-color: var(--dark-color);
+}
+.imageMail {
+  width: 80%;
+  margin: 2rem 1.5rem;
+  border-radius: 20px;
+}
+.contactWraper h3 {
+  text-align: center;
+  margin-top: 0px;
+  font-size: 2rem;
+  text-shadow: 2px -2px 6px var(--text-color);
+}
+/* styles for form section */
+#myform {
+  display: grid;
+  grid-template-columns: 10px, 6fr;
+
+  align-items: center;
+  gap: 0.5rem;
+}
+#myform label {
+  text-transform: uppercase;
+  text-shadow: 2px -2px 4px var(--text-color);
+}
+#myform input,
+textarea {
+  border-radius: 10px;
+  height: 7vh;
+  padding: 0.4rem 0.6rem;
+}
+#myform textarea {
+  height: 20vh;
+}
+[for="email"] {
+  margin-top: 2rem;
+}
+[type="submit"] {
+  background-color: var(--primary-color-dark);
+  height: 6vh;
+  width: 25%;
+  justify-self: center;
+  border-radius: 10px;
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.1rem;
+}
+[type="submit"]:hover {
+  opacity: 80%;
+  outline: 1px outset var(--text-color);
+}
+input:where([type="text"], [type="email"]):focus,
+textarea:focus {
+  outline: 2px solid var(--text-color);
+}
+.sendMessage {
+  color: var(--text-color);
+  background-color: var(--success-color);
+  font-size: 2rem;
+}
+.error {
+  color: var(--error-color-dark);
+}
+
+.errorBox {
+  background-color: var(--error-color);
+  outline: 1px outset var(--error-color-dark);
+}
+/* Small screens settings  for contact me and about me pages*/
+@media only screen and (max-width: 900px) {
+  .contactWraper {
+    width: 80%;
+  }
+  .imageAboutMe {
+    height: 30vh;
+    margin-top: 13rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .contactWraper {
+    width: 90%;
+    font-size: 0.6rem;
+    grid-template-columns: 1fr;
+  }
+  .contactWraper h3 {
+    font-size: 1rem;
+  }
+  .imageMail {
+    display: none;
+  }
+  .container {
+    height: 100%;
+    grid-template-columns: 1fr;
+  }
+  .imageAboutMe {
+    margin-top: 1rem;
+    height: 20vh;
+  }
+  .sliderWrapper,
+  .sliderWrapper p {
+    font-size: 15px;
+  }
+  .slide div {
+    margin-bottom: 20px;
+  }
+  @keyframes slide {
+    0% {
+      margin-top: -90px;
+    }
+    30% {
+      margin-top: -90px;
+    }
+    40% {
+      margin-top: -50px;
+    }
+    50% {
+      margin-top: -50px;
+    }
+    70% {
+      margin-top: 10px;
+    }
+    80% {
+      margin-top: 10px;
+    }
+    90% {
+      margin-top: 50px;
+    }
+
+    100% {
+      margin-top: 50px;
+    }
+  }
+}
+
+/* projects page */
+/* Grid */
+.grid-wrapper {
+  display: grid;
+  gap: 10px;
+  height: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+.front > img {
+  width: 100%;
+}
+.box {
+  background-color: var(--dark-color);
+  padding: 40px;
+  margin: 10px;
+}
+.front,
+.back {
+  position: absolute;
+  font-size: 28pt;
+  line-height: 100px;
+  text-align: center;
+  border-radius: 5px;
+  width: 50%;
+  height: 50%;
+  background: #282a3a;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  backface-visibility: hidden;
+}
+
+.back {
+  background: #fdf8e6;
+  transform: rotateY(180deg);
+  user-select: none;
+  color: var(--dark-color);
+}
+
+.box:hover .front {
+  transform: rotateY(180deg);
+}
+
+.box:hover .back {
+  transform: rotateY(0) rotateZ(0);
+}
+
+.flip-z .back {
+  transform: rotateY(180deg) rotateZ(50deg);
+}
+
+.flip-z:hover .front {
+  transform: rotateY(180deg) rotateZ(50deg);
+}

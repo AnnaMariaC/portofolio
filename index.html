@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/round-me.png" type="image/png" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>AnnAMaria</title>
+  </head>
+  <body>
+    <header class="zone">
+      <!-- logo box and image box -->
+      <div>
+        <img
+          class="imageLogo"
+          src="./img/Logo_simplu.png"
+          width="100rem"
+          alt="my logo picture"
+        />
+      </div>
+      <!--  navigate to pages -->
+      <div class="textBox">
+        <h1>AnnA Maria Conea Kenesz</h1>
+        <h2>Front-End Developer</h2>
+        <div class="buttonBox">
+          <a href="aboutme.html">About me</a>
+          <a href="project.html">Projects</a>
+          <a
+            href="https://drive.google.com/file/d/1TReshr0eG8suKqoS43jKhgpWVZfbsmwY/view?usp=sharing"
+            target="_blank"
+            >Resume</a
+          >
+          <a href="comment.html">Testimonials</a>
+          <a href="contact.html">Contact me</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- footer zone with social buttons -->
+    <footer>
+      <div class="socialContainer">
+        <button>
+          <a target="_blank" href="https://github.com/AnnaMariaC"
+            ><img src="./img/github.svg" alt="logo github"
+          /></a>
+        </button>
+        <button>
+          <a target="_blank" href="https://www.linkedin.com/in/annamariac"
+            ><img src="./img/linkedin.svg" alt="logo linkedin" />
+          </a>
+        </button>
+        <button>
+          <a href="https://wa.me/40741583364?text=Hello" target="_blank"
+            ><img src="./img/whatsapp.svg" alt="logo whatsapp" />
+          </a>
+        </button>
+      </div>
+      <!-- inject current year from js -->
+      <p>&copy;AnnAMaria, <span id="currentYear"></span></p>
+    </footer>
+    <script src="./scriptDate.js"></script>
+  </body>
+</html>
