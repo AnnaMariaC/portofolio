@@ -1,3 +1,4 @@
+// baza de date pentru proiecte
 const totalProjects = [
   {
     title: "Project CV",
@@ -72,42 +73,45 @@ const totalProjects = [
     demo: "https://annamariac.github.io/reactFinalProject/",
   },
 ];
+// containerul principal unde se adauga dinamic totul
 const wrapCards = document.querySelector(".grid-wrapper");
-
+//  iteream prin toate proiectele din baza de date cu forEach fiind vorba de un array
 totalProjects.forEach((project) => {
+  //crearea componentei divBox care este urmatorul container
   const divBox = document.createElement("div");
   divBox.className = "box";
   wrapCards.appendChild(divBox);
-  divBox.innerHTML = `
-  <div class="flip-z">
-    <div class="front">
-      <h3>${project.title}</h3>
-      <img src=${project.src} alt=${project.alt} />
-    </div>
-    <div class="back">
-      <p>${project.text}</p>
-      <h5>Build with:</h5>
-      <ul id="listTech">
-      <li>html</li>
-      <li >css</li>
-      </ul>
-      <div class="down">
-        <a href=${project.code}>GitHub Link</a>
-        <a href=${project.demo}>Demo</a>
-      </div>
-    </div>
-</div>
-
-`;
+  //crearea componentei divFlip care este urmatorul container locul unde se intorc cele 2 fete ale imagini
+  const divFlip = document.createElement("div");
+  divFlip.className = "flip-z";
+  divBox.appendChild(divFlip);
+  // div pentru tot ce reprezinta fata care are ca elemente un titlu si o imagine
+  const divFront = document.createElement("div");
+  divFront.className = "front";
+  divFlip.appendChild(divFront);
+  divFront.innerHTML = ` 
+  <h3>${project.title}</h3>
+  <img src=${project.src} alt=${project.alt} />`;
+  //div pentru partea din spate a imagini
+  const divBack = document.createElement("div");
+  divBack.className = "back";
+  divFlip.appendChild(divBack);
+  //contine static un titlu si o lista neordonata unde dinamic vor intra elementele din BD
+  divBack.innerHTML = `<p>${project.text}</p>
+     <h5>Build with:</h5>`;
+  const ulTech = document.createElement("ul");
+  divBack.appendChild(ulTech);
+  // iteram prin lista de tehnologii folosite si adaugam fiecare intr-un li
+  for (let i = 0; i < project.tech.length; i++) {
+    const li = document.createElement("li");
+    li.innerText = project.tech[i];
+    ulTech.appendChild(li);
+    console.log(project.tech[i]);
+  }
+  //ultimul container de pe parte din spate care are 2 link stilizate ca butoane
+  const divDown = document.createElement("div");
+  divDown.className = "down";
+  divBack.appendChild(divDown);
+  divDown.innerHTML = ` <a href=${project.code}>GitHub Link</a>
+       <a href=${project.demo}>Demo</a>`;
 });
-
-// function addLi(totalProjects) {
-//   totalProjects.forEach((project) =>
-//     project.tech.forEach((tehno) => {
-//       const ulTech = document.querySelector("#listTech");
-//       const li = document.createElement("li");
-//       ulTech.appendChild(li);
-//       return (li.innerText = tehno);
-//     })
-//   );
-// }

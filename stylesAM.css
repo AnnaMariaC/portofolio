@@ -351,15 +351,13 @@ textarea:focus {
   margin: 0.1rem;
 }
 .back ul {
-  /* display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  display: grid;
+  padding-left: 0;
+  grid-template-columns: repeat(auto-fill, minmax(30px, 40px));
   justify-content: center;
+  gap: 10px;
   justify-items: center;
-  align-items: center; */
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  align-items: flex-start;
+  align-items: center;
 }
 .back li {
   list-style-type: none;
