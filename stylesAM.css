@@ -88,10 +88,12 @@ menu li a:hover {
 .content {
   width: 100%;
   height: 77vh;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
+  overflow: hidden;
 }
 .sliderWrapper {
   font-size: 40px;
@@ -114,6 +116,7 @@ menu li a:hover {
 }
 .slider {
   height: 50px;
+  font-size: 2rem;
   padding-left: 15px;
   overflow: hidden;
 }
@@ -141,15 +144,29 @@ menu li a:hover {
   50% {
     margin-top: -100px;
   }
-  75% {
+  70% {
     margin-top: -0px;
   }
-  80% {
+  90% {
     margin-top: -0px;
   }
   100% {
     margin-top: 50px;
   }
+}
+.tech-logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0.4rem;
+}
+.tech-logo img {
+  width: 10%;
+  box-shadow: 6px 6px 10px var(--color-border);
+  border: 3px solid var(--color-border);
+  border-radius: 10px;
+  background-color: var(--text-color);
+  rotate: -45deg;
 }
 /* contact me page */
 /* big container for form section with all title picture form */
@@ -302,9 +319,8 @@ textarea:focus {
 /* Grid */
 .grid-wrapper {
   display: grid;
-  width: 100vw;
+  width: 100%;
   grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-  /* height: 80vh; */
   gap: 30px;
   margin: 0.8rem 0.3rem;
   padding: 1rem 0.3rem;
@@ -320,20 +336,21 @@ textarea:focus {
 .front,
 .back {
   display: flex;
-
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 10px 100px/ 120px 20px;
   width: 95%;
   height: 100%;
   background-color: var(--dark-color);
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   backface-visibility: hidden;
   color: var(--text-color);
+
   font-size: 1rem;
+  padding: 0.8rem;
 }
 .front > img {
   width: 100%;
@@ -368,10 +385,12 @@ textarea:focus {
 }
 .back a {
   text-decoration: none;
-  padding: 0.2rem;
+  margin: 0.2rem 0.9rem;
+  padding: 0.4rem;
   border: 1px solid var(--color-border);
   color: var(--dark-color);
   background-color: var(--color-border);
+  border-radius: 10px 30px;
 }
 .back a:hover {
   outline: 2px solid var(--primary-color-dark);
@@ -380,8 +399,10 @@ textarea:focus {
 .down {
   position: absolute;
   display: flex;
-  bottom: 10px;
-  gap: 10rem;
+  bottom: 5px;
+  /* left: 10px;
+  right: 10px; */
+  gap: 6.2rem;
 }
 
 .box:hover .front {
@@ -398,4 +419,99 @@ textarea:focus {
 
 .flip-z:hover .front {
   transform: rotateY(180deg) rotateZ(50deg);
+}
+/* testimonials zone */
+.testimonialsWrap {
+  display: grid;
+  width: 100%;
+  height: 60%;
+  position: relative;
+  top: 36%;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-content: space-around;
+  align-items: start;
+  margin: 0.8rem;
+  align-self: flex-start;
+  overflow-y: auto;
+}
+.commnetWraped {
+  background-color: var(--dark-color);
+  border-radius: 10px 100px/ 120px 100px;
+}
+.wrapModel {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dark-color);
+  width: 300px;
+  height: 45vh;
+  border-radius: 150px 100px/ 5px 130px;
+
+  padding: 0.8rem;
+  margin: 0.5rem;
+}
+.wrapModel li {
+  list-style: none;
+  padding: 0.2rem;
+}
+.wrapModel .push {
+  text-shadow: 1px 2px 3px;
+  position: relative;
+  bottom: 14px;
+}
+.quote {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 3rem;
+  color: var(--primary-color-dark);
+  text-shadow: 1px 2px 3px;
+}
+
+.commentForm {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 25vh;
+  top: 10px;
+}
+#comment,
+#fullName,
+#jobTitle {
+  align-self: center;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+#comment {
+  width: 70%;
+  height: 60%;
+  margin: 1rem 2rem;
+  resize: none;
+}
+#fullName,
+#jobTitle {
+  width: 30%;
+  height: 10%;
+  margin: 0.5rem 0.2rem;
+}
+
+.btn {
+  align-self: flex-end;
+  position: absolute;
+  width: 20%;
+  bottom: 5px;
+  right: 60px;
+  font-size: 1rem;
+  padding: 0.3rem;
+  text-shadow: 1px 1px 4px;
+  background-color: var(--color-border);
+  border-radius: 50%;
+}
+#comment:focus,
+#fullName:focus,
+#jobTitle:focus {
+  outline: 2px solid var(--primary-color);
+}
+.btn:hover {
+  background-color: var(--primary-color);
+  color: var(--text-color);
 }

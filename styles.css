@@ -16,6 +16,7 @@
 
 * {
   box-sizing: border-box;
+  font-family: "Indie Flower", cursive;
 }
 
 html {
@@ -79,6 +80,7 @@ h2 {
   color: var(--text-color);
   border: 0.5px solid var(--color-border);
   transition: all 0.3s linear;
+  position: relative;
 }
 /* hover styles */
 .zone:hover,

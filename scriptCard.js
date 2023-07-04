@@ -80,6 +80,7 @@ totalProjects.forEach((project) => {
   //crearea componentei divBox care este urmatorul container
   const divBox = document.createElement("div");
   divBox.className = "box";
+
   wrapCards.appendChild(divBox);
   //crearea componentei divFlip care este urmatorul container locul unde se intorc cele 2 fete ale imagini
   const divFlip = document.createElement("div");
@@ -112,6 +113,6 @@ totalProjects.forEach((project) => {
   const divDown = document.createElement("div");
   divDown.className = "down";
   divBack.appendChild(divDown);
-  divDown.innerHTML = ` <a href=${project.code}>GitHub Link</a>
-       <a href=${project.demo}>Demo</a>`;
+  divDown.innerHTML = `<a href=${project.demo}>Demo</a> <a href=${project.code}>GitHub Link</a>
+       `;
 });
