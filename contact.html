@@ -5,30 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./img/round-me.png" type="image/png" />
+    <!-- styles for burger meniu -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="stylesAM.css" />
     <title>AnnAMaria</title>
   </head>
   <body>
     <!-- Navbar to switch pages -->
-    <nav class="zone sticky">
-      <menu class="main-menu">
-        <a class="logoButton" href="index.html"
-          ><img src="./img/Logo_simplu.png" alt="Home button logo"
-        /></a>
-        <li><a href="aboutme.html">About me</a></li>
-        <li><a href="project.html">Projects</a></li>
-        <li>
-          <a
-            href="https://drive.google.com/file/d/1TReshr0eG8suKqoS43jKhgpWVZfbsmwY/view?usp=sharing"
-            target="_blank"
-            >Resume</a
-          >
-        </li>
-        <li><a href="comment.html">Testimonials</a></li>
-        <li class="push"><a href="contact.html">Contact me</a></li>
-      </menu>
-    </nav>
+    <div class="zone sticky completeMenu">
+      <a class="logoButton" href="index.html">
+        <img src="./img/Logo_simplu.png" alt="Home button logo"
+      /></a>
+      <nav>
+        <menu class="main-menu burgerMenu">
+          <li class="menuItem"><a href="aboutme.html">About me</a></li>
+          <li class="menuItem"><a href="project.html">Projects</a></li>
+          <li class="menuItem">
+            <a
+              href="https://drive.google.com/file/d/1TReshr0eG8suKqoS43jKhgpWVZfbsmwY/view?usp=sharing"
+              target="_blank"
+              >Resume</a
+            >
+          </li>
+          <li class="menuItem"><a href="comment.html">Testimonials</a></li>
+          <li class="push menuItem"><a href="contact.html">Contact me</a></li>
+        </menu>
+        <!-- button for hamburger menu -->
+        <button class="hamburger">
+          <span class="menuIcon material-symbols-outlined">menu</span>
+          <span class="closeIcon material-symbols-outlined">close</span>
+        </button>
+      </nav>
+    </div>
     <!-- Contact me form -->
     <div class="zone contactWraper">
       <div>

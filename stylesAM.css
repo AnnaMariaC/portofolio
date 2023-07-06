@@ -2,54 +2,92 @@ body {
   padding-top: 50px;
 }
 /*Navbar*/
+.completeMenu {
+  display: flex;
+  align-items: center;
+}
 .sticky {
   position: fixed;
   z-index: 1;
   top: 0;
+  padding: 0.4rem 0.2rem;
   width: 100%;
+  background-color: var(--dark-color);
 }
 .main-menu {
   display: flex;
   list-style-type: none;
   align-items: center;
-  font-size: 1rem;
-  background-color: var(--dark-color);
+  justify-content: center;
+  font-size: 1.2rem;
   margin: 0;
   padding: 0;
 }
 .logoButton img {
   border-radius: 10px;
-  width: 50px;
+  width: 60px;
   margin: 0.2rem 1rem;
 }
 .logoButton img:hover {
   transform: translate(2px);
 }
+.hamburger {
+  display: none;
+}
+/* small screen navbar */
 
 @media only screen and (max-width: 730px) {
-  .main-menu {
-    font-size: 0.7rem;
-    padding: 0;
+  /* burger menu for small screens only */
+  .burgerMenu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-100%);
+    transition: transform 0.2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60vh;
+    z-index: 99;
+    padding: 0.5rem 0.8rem;
+
+    font-size: 1.3rem;
+    background-color: var(--dark-color);
+    color: var(--text-color);
+    list-style: none;
+    border: none;
+    padding-top: 4rem;
   }
-}
-@media only screen and (max-width: 600px) {
-  .main-menu {
-    font-size: 0.5rem;
-    padding: 0;
+  .showMenu {
+    transform: translateY(0);
   }
-}
-@media only screen and (max-width: 530px) {
-  .main-menu li {
-    font-size: 0.5rem;
-    padding: 0.2;
-    margin: 0.2rem;
-    text-align: center;
+  .hamburger {
+    display: block;
+    position: fixed;
+    z-index: 100;
+    top: 0.1rem;
+    right: 0.5rem;
+    padding: 0.7rem;
+    border: none;
+    background: var(--dark-color);
+    cursor: pointer;
   }
-  .main-menu li a {
-    padding: 0;
+  .closeIcon {
+    display: none;
+    color: var(--text-color);
   }
-  .logoButton > img {
-    width: 25px;
+  .menuIcon {
+    color: var(--text-color);
+  }
+  .menuItem {
+    align-self: center;
+    justify-self: center;
+  }
+  .push {
+    bottom: 0;
+  }
+  .logoButton img {
+    width: 40px;
   }
 }
 li {
@@ -60,13 +98,15 @@ menu li a {
   text-decoration: none;
   padding: 0.5rem 0.7rem;
 }
-menu li a:hover {
+menu li a:hover,
+.hamburger:hover {
   border-radius: 20px;
   box-shadow: var(--text-color) 1px 3px 5px,
     inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
 }
 .push {
-  margin-left: auto;
+  position: absolute;
+  right: 0;
 }
 /* Container about me  */
 .container {
@@ -115,7 +155,7 @@ menu li a:hover {
   word-spacing: 0.3rem;
 }
 .slider {
-  height: 50px;
+  height: 60px;
   font-size: 2rem;
   padding-left: 15px;
   overflow: hidden;
@@ -238,8 +278,9 @@ textarea:focus {
 }
 .sendMessage {
   color: var(--text-color);
+  padding: 1rem 0.5rem;
   background-color: var(--success-color);
-  font-size: 2rem;
+  font-size: 1.4rem;
 }
 .error {
   color: var(--error-color-dark);
@@ -348,13 +389,12 @@ textarea:focus {
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   backface-visibility: hidden;
   color: var(--text-color);
-
   font-size: 1rem;
   padding: 0.8rem;
 }
 .front > img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 10px 100px/ 120px 20px;
   padding: 0.1rem 0.3rem;
 }
 
@@ -400,8 +440,6 @@ textarea:focus {
   position: absolute;
   display: flex;
   bottom: 5px;
-  /* left: 10px;
-  right: 10px; */
   gap: 6.2rem;
 }
 
@@ -445,26 +483,25 @@ textarea:focus {
   width: 300px;
   height: 45vh;
   border-radius: 150px 100px/ 5px 130px;
-
   padding: 0.8rem;
-  margin: 0.5rem;
+  margin: 0.5rem 1.5rem;
 }
 .wrapModel li {
   list-style: none;
   padding: 0.2rem;
 }
-.wrapModel .push {
-  text-shadow: 1px 2px 3px;
-  position: relative;
-  bottom: 14px;
-}
 .quote {
-  font-family: "Space Grotesk", sans-serif;
   font-size: 3rem;
   color: var(--primary-color-dark);
   text-shadow: 1px 2px 3px;
 }
-
+.toRight {
+  margin-left: auto;
+  text-shadow: 1px 2px 3px;
+  position: relative;
+  color: var(--primary-color-dark);
+  bottom: 14px;
+}
 .commentForm {
   position: absolute;
   display: flex;
@@ -482,9 +519,9 @@ textarea:focus {
 }
 
 #comment {
-  width: 70%;
-  height: 60%;
-  margin: 1rem 2rem;
+  width: 80%;
+  height: 50%;
+  margin: 0.5rem 1rem;
   resize: none;
 }
 #fullName,

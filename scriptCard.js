@@ -2,7 +2,7 @@
 const totalProjects = [
   {
     title: "Project CV",
-    src: "./projectImage/mycv.png",
+    src: "./projectImage/mycvB.png",
     alt: "my-cv",
     text: "This project was a fist CV project made in with HTML and CSS.",
     tech: ["html", "css"],
@@ -11,7 +11,7 @@ const totalProjects = [
   },
   {
     title: "Project A complex table",
-    src: "./projectImage/complextable.png",
+    src: "./projectImage/complextableB.png",
     alt: "complex table",
     text: "This my first complex table sturcture made in HTML and CSS.",
     tech: ["html", "css"],
@@ -20,7 +20,7 @@ const totalProjects = [
   },
   {
     title: "Project Start up",
-    src: "./projectImage/Startup.png",
+    src: "./projectImage/StartupB.png",
     alt: "startup page",
     text: "This is a start up page were I use boostrap for styling.",
     tech: ["html", "css", "boostrap"],
@@ -29,7 +29,7 @@ const totalProjects = [
   },
   {
     title: "Project TVSeries",
-    src: "./projectImage/tvseries.png",
+    src: "./projectImage/tvseriesB.png",
     alt: "tv series",
     text: "This is a single page with description of TVSeries.",
     tech: ["html", "css", "boostrap"],
@@ -38,7 +38,7 @@ const totalProjects = [
   },
   {
     title: "Project Portofolio",
-    src: "./projectImage/portofolio.png",
+    src: "./projectImage/portofolioB.png",
     alt: "portofolio",
     text: "This is my portofolio web site.",
     tech: ["html", "css", "JavaScript"],
@@ -47,7 +47,7 @@ const totalProjects = [
   },
   {
     title: "Project WeatherApp",
-    src: "./projectImage/weatherapp.png",
+    src: "./projectImage/weatherappB.png",
     alt: "portofolio",
     text: "This is a wheather app made with react and the data source is https://openweathermap.org/.",
     tech: ["html", "css", "JavaScript", "React"],
@@ -56,7 +56,7 @@ const totalProjects = [
   },
   {
     title: "Project Login/Register ",
-    src: "./projectImage/login-register.png",
+    src: "./projectImage/login-registerB.png",
     alt: "portofolio",
     text: "This is a small project in React with a login and register page.",
     tech: ["html", "css", "JavaScript", "React"],
@@ -65,7 +65,7 @@ const totalProjects = [
   },
   {
     title: "Project My Online Shop",
-    src: "./projectImage/onlineshop.png",
+    src: "./projectImage/onlineshopB.png",
     alt: "portofolio",
     text: "This is a complex React project with Json database were the product are show if you are login.",
     tech: ["html", "css", "JavaScript", "React"],
@@ -107,7 +107,6 @@ totalProjects.forEach((project) => {
     const li = document.createElement("li");
     li.innerText = project.tech[i];
     ulTech.appendChild(li);
-    console.log(project.tech[i]);
   }
   //ultimul container de pe parte din spate care are 2 link stilizate ca butoane
   const divDown = document.createElement("div");
