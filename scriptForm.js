@@ -3,34 +3,17 @@ const btnSubmit = document.querySelector("input[type=submit]");
 const nameMessenger = document.querySelector("#name");
 const email = document.querySelector("#email");
 const message = document.querySelector("#message");
-// const form = document.querySelector("#myform");
-// let span = document.querySelector(".span-error");
+const form = document.querySelector("#myform");
+let span = document.querySelector(".span-error");
 
 //function that change text on the input value and add a new class
 function changeButtonStyle() {
   btnSubmit.className = "sendMessage";
   btnSubmit.value = "✓";
 }
-//error for form
-// btnSubmit.addEventListener("click", (e) => {
-//   if (email.value === "") {
-//     console.log("check");
-//     span.className = "error";
-//     span.innerText = "Please write your email";
-//   } else if (nameMessenger.value === "") {
-//     console.log("check");
-//     span.className = "error";
-//     span.innerText = "Please write your email";
-//   } else if (message.value === "") {
-//     console.log("check");
-//     span.className = "error";
-//     span.innerText = "Please write your email";
-//   }
 
-//   e.preventDefault();
-// });
-//after click send button ->sends me email with the value completed in form with help of https://smtpjs.com/
-btnSubmit.addEventListener("click", (e) => {
+//send email function->sends me email with the value completed in form with help of https://smtpjs.com/
+function sendEmail(e) {
   e.preventDefault();
   let body =
     "You recive a new message <br/>" +
@@ -50,4 +33,26 @@ btnSubmit.addEventListener("click", (e) => {
     changeButtonStyle();
     document.querySelector("#myform").reset();
   });
-});
+}
+//after click send button
+btnSubmit.addEventListener("click", sendEmail);
+//error for form
+// btnSubmit.addEventListener("click", (e) => {
+//   if (email.value === "") {
+//     console.log("check");
+//     span.className = "error";
+//     span.innerText = "Please write your email";
+//   } else if (nameMessenger.value === "") {
+//     console.log("check");
+//     span.className = "error";
+//     span.innerText = "Please write your email";
+//   } else if (message.value === "") {
+//     console.log("check");
+//     span.className = "error";
+//     span.innerText = "Please write your email";
+//   } else {
+//     sendEmail;
+//   }
+
+//   e.preventDefault();
+// });

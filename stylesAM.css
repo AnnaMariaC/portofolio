@@ -362,10 +362,12 @@ textarea:focus {
 .grid-wrapper {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-  gap: 30px;
-  margin: 0.8rem 0.3rem;
-  padding: 1rem 0.3rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  align-items: center;
+  justify-items: center;
+  gap: 20px;
+  margin: 1.5rem 0.3rem;
+  padding: 1.3rem 0.4rem;
 }
 
 .box {
@@ -373,7 +375,7 @@ textarea:focus {
   width: 330px;
   height: 330px;
   cursor: pointer;
-  padding: 0.5rem 0.9rem;
+  padding: 0.2rem 0.2rem;
 }
 .front,
 .back {
@@ -489,8 +491,9 @@ textarea:focus {
 }
 .wrapModel li {
   list-style: none;
-  padding: 0.2rem;
+  padding: 0.1rem;
 }
+
 .quote {
   font-size: 3rem;
   color: var(--primary-color-dark);
@@ -501,8 +504,9 @@ textarea:focus {
   text-shadow: 1px 2px 3px;
   position: relative;
   color: var(--primary-color-dark);
-  bottom: 14px;
+  bottom: 22px;
 }
+
 .commentForm {
   position: absolute;
   display: flex;
@@ -529,7 +533,7 @@ textarea:focus {
 #jobTitle {
   width: 30%;
   height: 10%;
-  margin: 0.5rem 0.2rem;
+  margin: 0.3rem 0.2rem;
 }
 
 .btn {
@@ -552,4 +556,21 @@ textarea:focus {
 .btn:hover {
   background-color: var(--primary-color);
   color: var(--text-color);
+}
+@media only screen and (max-width: 860px) {
+  .commentForm {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .btn {
+    font-size: 0.5rem;
+    right: 35px;
+    bottom: 20px;
+  }
+  #comment,
+  #fullName,
+  #jobTitle {
+    font-size: 0.7rem;
+  }
 }
