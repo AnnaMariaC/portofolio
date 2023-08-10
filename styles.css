@@ -131,7 +131,6 @@ h2 {
 footer {
   text-align: center;
   margin: 1.4rem 2rem;
-  margin-top: 0;
   border-radius: 20px;
   color: var(--dark-color);
 }
