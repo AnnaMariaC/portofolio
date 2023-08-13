@@ -116,7 +116,7 @@ menu li a:hover,
   gap: 10px;
   margin: 1rem 1rem;
   padding: 1rem 1rem;
-  height: 80vh;
+  height: 95vh;
 }
 .div-image {
   padding: 0.4rem 1rem;
@@ -125,6 +125,9 @@ menu li a:hover,
 .imageAboutMe {
   margin-top: 6rem;
   height: 50vh;
+}
+.handwriting {
+  font-family: "Indie Flower", cursive;
 }
 .content {
   width: 100%;
@@ -150,7 +153,7 @@ menu li a:hover,
 }
 .sliderWrapper > p {
   text-align: justify;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin: 5px;
   padding: 1rem 1.1rem;
   word-spacing: 0.3rem;
@@ -177,13 +180,13 @@ menu li a:hover,
 
 @keyframes slide {
   0% {
-    margin-top: -200px;
+    margin-top: -160px;
   }
   30% {
-    margin-top: -100px;
+    margin-top: -90px;
   }
   50% {
-    margin-top: -100px;
+    margin-top: -90px;
   }
   70% {
     margin-top: -0px;
@@ -195,21 +198,42 @@ menu li a:hover,
     margin-top: 50px;
   }
 }
-
-.tech-logo {
+#skills-zone {
+  font-size: 2rem;
+  color: var(--color-border);
+}
+#skills-zone h4 {
+  margin: 0;
+}
+.tech-container {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin: 0.2rem;
+  width: 200%;
+  height: 170px;
+  margin: 0.1rem 1.1rem;
 }
-.tech-logo img {
-  width: 10%;
-  box-shadow: 6px 6px 10px var(--color-border);
-  border: 3px solid var(--color-border);
-  border-radius: 10px;
-  background-color: var(--text-color);
-  rotate: -45deg;
+
+.tech-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  margin: 0.4rem;
+  gap: 3rem;
+  /* animation: scroll 5s linear infinite; */
 }
+.tech-box img {
+  width: 80px;
+  height: 80px;
+  background-color: var(--primary-color-dark);
+  transform: rotate(-45deg);
+  margin-bottom: 0.6rem;
+  padding: 4px 6px;
+  box-shadow: 2px 6px 8px var(--primary-color-dark);
+}
+
 /* contact me page */
 /* big container for form section with all title picture form */
 .contactWraper {
@@ -293,6 +317,11 @@ textarea:focus {
   outline: 1px outset var(--error-color-dark);
 }
 /* Small screens settings  for contact me and about me pages*/
+@media only screen and (max-width: 1200px) {
+  .sliderWrapper > p {
+    font-size: 20px;
+  }
+}
 @media only screen and (max-width: 900px) {
   .contactWraper {
     width: 80%;
@@ -300,6 +329,9 @@ textarea:focus {
   .imageAboutMe {
     height: 30vh;
     margin-top: 13rem;
+  }
+  .sliderWrapper > p {
+    font-size: 15px;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -322,6 +354,10 @@ textarea:focus {
     margin-top: 1rem;
     height: 20vh;
   }
+  .slider {
+    height: 30px;
+    font-size: 1.2rem;
+  }
   .sliderWrapper,
   .sliderWrapper p {
     font-size: 15px;
@@ -331,26 +367,22 @@ textarea:focus {
   }
   @keyframes slide {
     0% {
-      margin-top: -140px;
+      margin-top: -130px;
     }
     30% {
-      margin-top: -100px;
-    }
-    40% {
-      margin-top: -90px;
+      margin-top: -70px;
     }
     50% {
-      margin-top: -50px;
+      margin-top: -70px;
     }
     70% {
-      margin-top: 0px;
+      margin-top: 5px;
     }
-    80% {
-      margin-top: 0px;
+    90% {
+      margin-top: 5px;
     }
-
     100% {
-      margin-top: 50px;
+      margin-top: 40px;
     }
   }
 }
@@ -504,7 +536,9 @@ textarea:focus {
   color: var(--primary-color-dark);
   bottom: 22px;
 }
-
+.toRight p {
+  font-style: italic;
+}
 .commentForm {
   position: absolute;
   display: flex;
