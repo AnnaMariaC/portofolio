@@ -113,6 +113,7 @@ menu li a:hover,
 .container {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+
   gap: 10px;
   margin: 1rem 1rem;
   padding: 1rem 1rem;
@@ -159,7 +160,7 @@ menu li a:hover,
   word-spacing: 0.3rem;
 }
 .slider {
-  height: 60px;
+  height: 40px;
   font-size: 2rem;
   padding-left: 15px;
   overflow: hidden;
@@ -180,13 +181,16 @@ menu li a:hover,
 
 @keyframes slide {
   0% {
-    margin-top: -160px;
+    margin-top: -130px;
+  }
+  10% {
+    margin-top: -90px;
   }
   30% {
     margin-top: -90px;
   }
   50% {
-    margin-top: -90px;
+    margin-top: -40px;
   }
   70% {
     margin-top: -0px;
@@ -194,24 +198,29 @@ menu li a:hover,
   90% {
     margin-top: -0px;
   }
+  95% {
+    margin-top: 20px;
+  }
   100% {
     margin-top: 50px;
   }
 }
 #skills-zone {
   font-size: 2rem;
+  width: 100vw;
   color: var(--color-border);
 }
 #skills-zone h4 {
   margin: 0;
 }
 .tech-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 200%;
-  height: 170px;
-  margin: 0.1rem 1.1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 80px);
+  grid-auto-flow: row;
+  gap: 3.2rem;
+  width: 90%;
+  height: 200px;
+  margin: 2rem 1.1rem;
 }
 
 .tech-box {
@@ -223,7 +232,7 @@ menu li a:hover,
   margin: 0.2rem 0.5rem;
   padding: 0.4rem 0.6rem;
   background-color: var(--primary-color-dark);
-  box-shadow: 2px 6px 8px var(--primary-color-dark);
+  box-shadow: 2px 6px 8px var(--primary-color);
   transform: rotate(45deg);
 }
 .tech-box > img {
@@ -333,6 +342,16 @@ textarea:focus {
   .sliderWrapper > p {
     font-size: 15px;
   }
+  .tech-container {
+    gap: 1.5rem;
+  }
+  .tech-box {
+    width: 4rem;
+    height: 4rem;
+  }
+  .tech-box > img {
+    width: 60px;
+  }
 }
 @media only screen and (max-width: 600px) {
   .contactWraper {
@@ -384,6 +403,16 @@ textarea:focus {
     100% {
       margin-top: 40px;
     }
+  }
+  .tech-container {
+    gap: 1rem;
+  }
+  .tech-box {
+    width: 3rem;
+    height: 3rem;
+  }
+  .tech-box > img {
+    width: 50px;
   }
 }
 
