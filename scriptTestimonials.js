@@ -12,7 +12,7 @@ function addComment() {
   const fullName = nameInput.value.trim();
   const comment = commentInput.value.trim();
   const jobTitle = jobInput.value.trim();
-  // realizam obiectul care trebui adaugat in lista  cu id, comment, fullName si jobTitle
+  // realizam obiectul care trebuie adaugat in lista  cu id, comment, fullName si jobTitle
   let id = commentList.length + 1;
   if (comment !== " ") {
     commentList.push({

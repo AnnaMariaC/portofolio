@@ -80,7 +80,6 @@ totalProjects.forEach((project) => {
   //crearea componentei divBox care este urmatorul container
   const divBox = document.createElement("div");
   divBox.className = "box";
-
   wrapCards.appendChild(divBox);
   //crearea componentei divFlip care este urmatorul container locul unde se intorc cele 2 fete ale imagini
   const divFlip = document.createElement("div");
